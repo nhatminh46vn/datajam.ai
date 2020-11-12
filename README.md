@@ -1,5 +1,6 @@
 # Datajam.ai
-resources to prepare for interview and boost your confidence when working with data in general
+Resources to prepare for interviews and/or boost your confidence when working with data in general.
+
 
 ## Spark 101
 simple exercices: 
