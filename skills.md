@@ -1,13 +1,13 @@
 # Skills -  PYTHON lab 1:
 ![](https://img.shields.io/static/v1?label=LAB&message=1&color=blue)
 
-##  Tools/Technology:
+##  Tools/Technology: ![](https://img.shields.io/badge/BASIC-green)
 - How to use google colab
 - Use Markdown
 - Use Code
 - Structure 
 
-##  Notions:
+##  Notions: ![](https://img.shields.io/badge/BASIC-green)
 - Variables
  * Types:
    - int
@@ -36,7 +36,7 @@
   * How
   * Why
 
-## Python coding/structure skills:
+## Python coding/structure skills: ![](https://img.shields.io/badge/BASIC-green)
 - Function:
    * What
    * How
@@ -47,26 +47,28 @@
 - Import packages
  
 
-## Common Python data structures:
+## Common Python data structures: ![](https://img.shields.io/badge/INTERMEDIATE-orange)
 - List
 - Dictionary
 - Set
 - Tuples
+
 - Queues
 - Stack
 
-## Common Flow operations:
+## Common Flow operations: ![](https://img.shields.io/badge/BASIC-green)
 - Condition: 
    * if 
    * else 
    * elif
+   
 - Iteration
    * for loop
    * while loop
    * break
    * continue
   
-## Exceptions handling
+## Exceptions handling ![](https://img.shields.io/badge/BASIC-green)
  - try + except
  - assert
   
