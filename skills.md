@@ -22,14 +22,14 @@
    - multiplication
 
 - Module:
- * What
- * How
- * Why
+   * What
+   * How
+   * Why
  
-- Package vs Module 
- - Pip vs Conda 
+- Package vs Module
+* Pip vs Conda 
  - install packages
-  * pip install
+   * pip install
  
 - Environment
   * What
