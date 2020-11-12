@@ -14,12 +14,12 @@
    - float
    - string
   
- - Operations:
-  * concatenation
-  * addition
-  * division
-  * subtraction
-  * multiplication
+ * Operations:
+   - concatenation
+   - addition
+   - division
+   - subtraction
+   - multiplication
 
 - Module:
  * What
