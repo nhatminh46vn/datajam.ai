@@ -52,7 +52,7 @@
   - try + except
   - assert
   
-## Putting everything together
+## Putting everything together: ![](https://img.shields.io/badge/IO-HOT-RED)
 
  - Write function to read a text file line by line
  - Write a function which count the number of words
