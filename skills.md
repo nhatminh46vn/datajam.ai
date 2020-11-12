@@ -9,10 +9,10 @@
 
 ##  Notions:
 - Variables
- - Types:
-  * int
-  * float
-  * string
+ * Types:
+   - int
+   - float
+   - string
   
  - Operations:
   * concatenation
@@ -98,16 +98,3 @@
  - Write a function returning the frequency of a word in a given text
  - Write a function encoding a string as a vector of numbers (a->0 z->25) 
  - Write a module with all aforemented functions
- 
- 
-
- 
- 
-  
-
-  
-  
-  
- 
-  
-  
