@@ -36,40 +36,39 @@
   * How
   * Why
 
-## Python coding skills:
+## Python coding/structure skills:
 - Function:
- * What
- * How
- * Why
- 
+   * What
+   * How
+   * Why
 - Custom functions
 - Built-in functions
-- import modules
-- import packages
+- Import modules
+- Import packages
  
 
 ## Common Python data structures:
- - list
- - dictionary
- - set
- - tuples
- - queues
- - stack
-  
+- List
+- Dictionary
+- Set
+- Tuples
+- Queues
+- Stack
+
 ## Common Flow operations:
-  - Condition: 
+- Condition: 
    * if 
    * else 
    * elif
-  - Iteration
+- Iteration
    * for loop
    * while loop
    * break
    * continue
   
 ## Exceptions handling
-  - try + except
-  - assert
+ - try + except
+ - assert
   
 ## Putting everything together: ![](https://img.shields.io/badge/I/O-HOT-red) ![](https://img.shields.io/badge/COMMENT-YOURCODE-red)
 
