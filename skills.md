@@ -8,17 +8,32 @@
 
 ##  Notions:
 - Variables
-- Types:
+ - Types:
   * int
   * float
   * string
+  
+ - Operations:
+  * concatenation
+  * addition
+  * division
+  * subtraction
+  * multiplication
 
-- Module
-- Package vs Module
-- install packages
-- Pip vs Conda 
-- environment
-
+- Module:
+ * What
+ * How
+ * Why
+ 
+- Package vs Module 
+ - Pip vs Conda 
+ - install packages
+  * pip install
+ 
+- Environment
+  * What
+  * How
+  * Why
 
 ## Python coding skills:
 - Function:
@@ -28,7 +43,6 @@
  
 - Custom functions
 - Built-in functions
-
 - import modules
 - import packages
  
@@ -42,17 +56,22 @@
  - stack
   
 ## Common Flow operations:
-  - if else elif
-  - for loop
-  - while loop
-  - break
-  - continue
+  - Condition: 
+   * if 
+   * else 
+   * elif
+  - Iteration
+   * for loop
+   * while loop
+   * break
+   * continue
   
 ## Exceptions handling
   - try + except
   - assert
   
-## Putting everything together: ![](https://img.shields.io/badge/I/O-HOT-red)
+## Putting everything together: ![](https://img.shields.io/badge/I/O-HOT-red) ![](https://img.shields.io/badge/COMMENT-YOUR CODE-red)
+
 
  - Write function to read a text file line by line
  - Write a function which count the number of words
@@ -68,8 +87,9 @@
  - Write a function which writes to file
  - Write a function which append to file
  - Write a function which uses an API to generate sound 
- - Write the frequency of a word in a given text
- - Encode a string as a vector of numbers (a->0 z->25) 
+ - Write a function returning the frequency of a word in a given text
+ - Write a function encoding a string as a vector of numbers (a->0 z->25) 
+ 
 
  
  
