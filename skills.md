@@ -70,7 +70,7 @@
   - try + except
   - assert
   
-## Putting everything together: ![](https://img.shields.io/badge/I/O-HOT-red) ![](https://img.shields.io/badge/COMMENT-YOUR CODE-red)
+## Putting everything together: ![](https://img.shields.io/badge/I/O-HOT-red) ![](https://img.shields.io/badge/COMMENT-YOURCODE-red)
 
 
  - Write function to read a text file line by line
