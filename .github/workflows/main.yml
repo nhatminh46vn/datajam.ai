@@ -3,8 +3,8 @@ on: push
 
 jobs:
   build:
-    name: Hello world action
+    name: Build Dockerfile
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./Docker_tf
+      - uses: ./Docker101/Docker_tf/
