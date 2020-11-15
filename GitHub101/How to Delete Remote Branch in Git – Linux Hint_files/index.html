@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0145)https://s0.2mdn.net/ads/richmedia/studio/pv2/61586232/20201005083606879/index.html?e=69&leftOffset=0&topOffset=0&c=b2YwXoe6dz&t=1&renderingType=2 -->
+<html class=" -webkit-"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>728x90</title>
+	 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="ad.size" content="width=728,height=90"> 
+	
+	
+	
+	<script src="./Enabler_01_244.js"></script>
+	<script src="./jquery-2.1.0.min.js"></script>
+	<script src="./script_728x90.js"></script>
+	<script src="./prefixfree.min.js"></script>
+
+<style media="" data-href="style.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+body{ margin: 0;  padding: 0; background-color: #ffffff; }
+.ad {width: 728px; height: 90px; position: absolute; overflow: hidden; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.banner { position: absolute; display: block; width: inherit;  height: inherit; overflow: hidden; }
+
+/*===== Visibilité des éléments =====*/
+
+.img { width: 728px; height: 90px; position: absolute; top: 0; left:0; opacity: 0; }
+.step2, .step2bis, .step3, .step4, .step5, .modalites2 { opacity: 0;}
+.marielouise, .connecteur, .visuel, .step4-left { opacity: 1; }
+
+/*===== Styles communs =====*/
+.wording {font-family: 'Montserrat',sans-serif; font-weight:600; color: #ffffff; line-height: 1; text-align: left; }
+.step2        { font-size:16px; }
+.step2bis     { font-size:16px; }
+.step3        { font-size:16px; }
+.step4        { font-size:19px; text-align: center; }
+.step5-border { width: 200px; padding: 5px 5px; border: 6px solid #fff; text-align: center;  }
+.cta          { font-size:21px; display: block; font-weight:800; width: 100%;}
+.modalites, .modalites2    { font-size:8px;font-weight:400; margin-top: 8px; }
+.service  { font-size:19px; text-align: center; }
+.visuel {position: absolute; top: 0; left: 0; z-index: -1;}
+.service-out  {width: 350px;position: absolute;height: 80px;top: 5px;left: 5px; position: relative;}
+.modalites2, .modalites {position: absolute; bottom: -5px; left: 0}
+
+/*===== PART LEFT =====*/
+.part-left   { position: absolute; top: 0; left: 0; width: 728px; height: 80px; }
+.service   { position: absolute; top: 33%; width: 280px; top: 50%; left: 50%; height: auto;transform: translateY(-50%) translateX(-50%);}
+.case2, .case3, .case4 { opacity: 0;}
+.case4 {display: none;}
+
+/*===== STEP 1 visuel + partie droite > Positions  =====*/	
+.part-right { position: absolute; top: 0; left: 0; width: 728px; height: 90px; background-color: #ce885b; }
+    
+/*===== STEP 2 accroche > Positions   =====*/
+.step2 { position: absolute; top: 5px; left: 15px; width: 320px; height: 80px; display: flex; flex-direction: column; justify-content: center; align-items: left;padding-left: 25px;}
+.serv1 {  display: flex; align-items: flex-end;} 
+.serv2 { display: none;  display: flex; align-items: flex-start;}
+
+/*===== STEP 2 BIS accroche > Positions   =====*/
+.step2bis { position: absolute; left: 35px; width: 330px; height: 80px;top: 5px; display: flex; align-items: center; justify-content: left;}
+.serv3, .serv4    { display: block; width: 300px;} 
+
+.connecteur { position: absolute; top: 31%; left: -4%; }
+
+/*===== STEP 3 > Positions   =====*/
+.step3 { position: absolute; top: 5px; left: 5px; width: 330px; height: 80px; padding-left: 25px;}
+.claim { position: absolute; top: 0; height: 80px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.serv4 {text-align: center;}
+
+/*===== STEP 4 > Positions   =====*/
+.step4        { position: absolute; top: 5px; left: 20px; width: 330px; height: 80px; opacity: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0;}
+.claim2-right { display: block; width: 300px;}
+
+/*===== STEP 5 > Positions   =====*/
+.step5 { position: absolute; top: 23px; left: 136px; }
+.rea   { position : absolute; top: -6px; left: 263px; }
+
+
+
+/*===== DEPLACEMENT par ordre chrono  =====*/
+
+/*= STEP1 to STEP5 =*/
+
+.anim .part-right { animation: slideInRightWording 12s 0s cubic-bezier(0, 0.53, 0.38, 1.01) both; }
+
+/*= STEP2 =*/
+.anim .serv1      { animation: fadeIn 0.2s 1.8s both; }
+.anim .serv2      { animation: fadeIn 0.4s 3.5s both; }
+
+.anim .step2      { animation: fadeOut 0.2s 5.8s both; }
+
+.connecteur       { animation: slideConnect 5s 1.5s both; }
+
+
+/*= STEP2BIS =*/
+.anim .serv3    { animation: fadeIn 0.2s 6.1s both; }
+.anim .modalites2    { animation: fadeIn 0.2s 6.1s both; }
+.anim .step2bis { animation: fadeOut 0.5s 8s both; }
+
+/*= STEP3 =*/
+.anim .claim    { animation: fadeIn 0.2s 8.3s both; }
+.anim .step3 { animation: fadeOut 0.2s 11s both; }
+
+/*= STEP4 =*/ 
+/* .anim .claim2-right { animation: fadeIn 0.5s 11.2s both; }
+.anim .step4        { animation: fadeOut 0.2s 13s both; } */
+
+.connectout	   { animation: fadeOut 0s 12s both; }	
+
+/*= STEP5 =*/
+.step5 { animation: fadeInLeft 0.3s 12.3s  cubic-bezier(0, 0.53, 0.38, 1.01) both; }
+.rea   { animation: fadeIn 0.3s 12.5s both; }
+
+
+/*================= ANIMATIONS SPECIFIQUES	================== */	
+
+@keyframes slideInRightWording {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  10% {
+    transform: translate3d(50%, 0, 0);
+  }
+  93% {
+    transform: translate3d(50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*================= ANIMATIONS GENERIQUES ================== */	
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+	<div id="ad" class="ad" style="cursor:pointer">
+		<div id="banner" class="banner anim">
+
+			<div class="part-left wording">
+				
+				<div class="service-out">
+					<div class="service case1" style="animation-name: fadeOut; animation-duration: 0.5s; animation-fill-mode: forwards;"></div> 
+					<div class="service case2" style="animation-name: fadeOut; animation-duration: 0.5s; animation-fill-mode: forwards;"></div>
+					<div class="service case3" style="animation-name: fadeIn; animation-duration: 0.5s; animation-fill-mode: forwards;">Vos modes de vie changent.</div>
+					<div class="service case4"></div>
+				</div>
+				
+				<img src="./728x90_garantie_gout_fraicheur_raisin.jpg_1601912366494_728x90_garantie_gout_fraicheur_raisin.jpg" class="visuel">
+			</div>
+			
+			<div class="part-right wording" style="background-color: rgb(36, 45, 96);">		
+				<div class="connectout">
+					<div class="connecteur"><img src="./connecteur.png"></div>
+				</div>
+
+				<div class="step2" style="font-size: 12px;">
+					<div class="serv1">Si votre raisin commandé en ligne est fermenté, </div>
+					<div class="serv2" style="display: block;">il y a un pépin.</div>
+				</div>
+				
+				<div class="step2bis" style="height: 70px;">
+					<div class="serv3">Remboursement immédiat si vous n'êtes pas satisfait.</div>
+					<div class="modalites2">Modalités sur carrefour.fr</div>
+				</div>
+			
+			
+				<div class="step3">
+					<div class="claim">
+						<div class="serv4">Nos services s'adaptent.</div>
+						<div class="modalites"></div>	
+					 </div>
+				</div>
+				
+				<div class="step4">
+					<div class="claim2-right"></div>
+				</div>
+				<div class="step5">
+					<div class="step5-border">
+						<div class="cta">J'EN PROFITE</div>
+					</div>
+					<div class="rea"><img src="./picto_4.png_1601912366494_picto_4.png"></div>
+				</div>
+
+			</div>
+			<img src="./marielouise.png" class="marielouise img">
+			
+		</div>
+	</div>
+
+<iframe style="display: none;" src="./saved_resource(4).html"></iframe></body></html>

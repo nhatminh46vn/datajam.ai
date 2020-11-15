@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://linuxhint.com/git_delete_remote_branch/ -->
+<html lang="en-US" class="no-js no-svg"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./How to Delete Remote Branch in Git – Linux Hint_files/osd.js"></script><script async="" src="./How to Delete Remote Branch in Git – Linux Hint_files/wrap.js"></script><script async="" src="./How to Delete Remote Branch in Git – Linux Hint_files/wrap(1).js"></script><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/config.js"></script><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/beacon.js"></script><script async="" defer="" src="./How to Delete Remote Branch in Git – Linux Hint_files/gdpr.bundle.js"></script><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/web-vitals.es5.umd.min.js" defer=""></script><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/prebid.min.js"></script><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/gpt.js"></script><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/gdpr-liveramp.js"></script><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/adthrive.min.js"></script><script type="text/javascript" async="" src="./How to Delete Remote Branch in Git – Linux Hint_files/analytics.js"></script>
+
+
+<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<title>How to Delete Remote Branch in Git – Linux Hint</title>
+
+<script type="text/javascript" async="" src="./How to Delete Remote Branch in Git – Linux Hint_files/atrk.js"></script><script async="" src="./How to Delete Remote Branch in Git – Linux Hint_files/ads.min.js"></script><script>
+(function(w, d) {
+	w.adthrive = w.adthrive || {};
+	w.adthrive.cmd = w.adthrive.cmd || [];
+	w.adthrive.plugin = 'adthrive-ads-1.0.41';
+	w.adthrive.host = 'ads.adthrive.com';
+
+	var s = d.createElement('script');
+	s.async = true;
+	s.referrerpolicy='no-referrer-when-downgrade';
+	s.src = 'https://' + w.adthrive.host + '/sites/5c9b6001b80bec0dfaf0b493/ads.min.js?referrer=' + w.encodeURIComponent(w.location.href);
+	var n = d.getElementsByTagName('script')[0];
+	n.parentNode.insertBefore(s, n);
+})(window, document);
+</script>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://linuxhint.com/">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://ads.adthrive.com/">
+<link rel="dns-prefetch" href="https://z-na.amazon-adsystem.com/">
+<link rel="dns-prefetch" href="https://certify-js.alexametrics.com/">
+<link rel="dns-prefetch" href="https://www.google-analytics.com/">
+<link rel="dns-prefetch" href="https://aax-us-east.amazon-adsystem.com/">
+<link rel="dns-prefetch" href="https://certify.alexametrics.com/">
+<link rel="dns-prefetch" href="https://ws-na.amazon-adsystem.com/">
+<link rel="dns-prefetch" href="https://c.amazon-adsystem.com/">
+<link rel="dns-prefetch" href="https://securepubads.g.doubleclick.net/">
+<link rel="dns-prefetch" href="https://logger.adthrive.com/">
+<link rel="dns-prefetch" href="https://sb.scorecardresearch.com/">
+<link rel="dns-prefetch" href="https://confiant-integrations.global.ssl.fastly.net/">
+<link rel="dns-prefetch" href="https://gum.criteo.com/">
+<link rel="dns-prefetch" href="https://prebid.adnxs.com/">
+<link rel="dns-prefetch" href="https://a.teads.tv/">
+<link rel="dns-prefetch" href="https://fastlane.rubiconproject.com/">
+<link rel="dns-prefetch" href="https://ib.adnxs.com/">
+<link rel="dns-prefetch" href="https://htlb.casalemedia.com/">
+<link rel="dns-prefetch" href="https://s.amazon-adsystem.com/">
+<link rel="dns-prefetch" href="https://x.bidswitch.net/">
+<link rel="dns-prefetch" href="https://rtb.gumgum.com/">
+<link rel="dns-prefetch" href="https://ssum-sec.casalemedia.com/">
+<link rel="dns-prefetch" href="https://ads.pubmatic.com/">
+<link rel="dns-prefetch" href="https://eus.rubiconproject.com/">
+<link rel="dns-prefetch" href="https://pixel.advertising.com/">
+<link rel="dns-prefetch" href="https://u.openx.net/">
+<link rel="dns-prefetch" href="https://ap.lijit.com/">
+<link rel="dns-prefetch" href="https://cdn.districtm.io/">
+<link rel="dns-prefetch" href="https://eb2.3lift.com/">
+<link rel="dns-prefetch" href="https://pixel-sync.sitescout.com/">
+<link rel="dns-prefetch" href="https://pixel.quantserve.com/">
+<link rel="dns-prefetch" href="https://pixel-eu.rubiconproject.com/">
+<link rel="dns-prefetch" href="https://bh.contextweb.com/">
+<link rel="dns-prefetch" href="https://sync-tm.everesttech.net/">
+<link rel="dns-prefetch" href="https://pr-bh.ybp.yahoo.com/">
+<link rel="dns-prefetch" href="https://match.adsrvr.org/">
+<link rel="dns-prefetch" href="https://cm.g.doubleclick.net/">
+<link rel="dns-prefetch" href="https://ups.analytics.yahoo.com/">
+<link rel="dns-prefetch" href="https://secure.adnxs.com/">
+<link rel="dns-prefetch" href="https://sync.outbrain.com/">
+<link rel="dns-prefetch" href="https://us-u.openx.net/">
+<link rel="dns-prefetch" href="https://sync.srv.stackadapt.com/">
+<link rel="dns-prefetch" href="https://sync.ipredictive.com/">
+<link rel="dns-prefetch" href="https://b1sync.zemanta.com/">
+<link rel="dns-prefetch" href="https://sync.1rx.io/">
+<link rel="dns-prefetch" href="https://sync.mathtag.com/">
+<link rel="dns-prefetch" href="https://sync.technoratimedia.com/">
+<link rel="dns-prefetch" href="https://cs.emxdgt.com/">
+<link rel="dns-prefetch" href="https://tg.socdm.com/">
+<link rel="dns-prefetch" href="https://ce.lijit.com/">
+<link rel="dns-prefetch" href="https://dmx.districtm.io/">
+<link rel="dns-prefetch" href="https://loadm.exelator.com/">
+<link rel="dns-prefetch" href="https://dsum-sec.casalemedia.com/">
+<link rel="dns-prefetch" href="https://sync.extend.tv/">
+<link rel="dns-prefetch" href="https://d.adroll.com/">
+<link rel="dns-prefetch" href="https://ad.turn.com/">
+<link rel="dns-prefetch" href="https://t.pswec.com/">
+<link rel="dns-prefetch" href="https://districtm-match.dotomi.com/">
+<link rel="dns-prefetch" href="https://dmx.us-east-15.districtm.io/">
+<link rel="dns-prefetch" href="https://ic.tynt.com/">
+<link rel="dns-prefetch" href="https://image6.pubmatic.com/">
+<link rel="dns-prefetch" href="https://pixel.tapad.com/">
+<link rel="dns-prefetch" href="https://pixel-us-east.rubiconproject.com/">
+<link rel="dns-prefetch" href="https://de.tynt.com/">
+<link rel="dns-prefetch" href="https://token.rubiconproject.com/">
+<link rel="dns-prefetch" href="https://id.sharedid.org/">
+<link rel="dns-prefetch" href="https://id.rlcdn.com/">
+<link rel="dns-prefetch" href="https://pixel.rubiconproject.com/">
+<link rel="dns-prefetch" href="https://stags.bluekai.com/">
+<link rel="dns-prefetch" href="https://p.adsymptotic.com/">
+<link rel="dns-prefetch" href="https://um.simpli.fi/">
+<link rel="dns-prefetch" href="https://simage2.pubmatic.com/">
+<link rel="dns-prefetch" href="https://image2.pubmatic.com/">
+<link rel="dns-prefetch" href="https://secure-assets.rubiconproject.com/">
+<link rel="dns-prefetch" href="https://ssc-cms.33across.com/">
+<link rel="dns-prefetch" href="https://sync.targeting.unrulymedia.com/">
+<link rel="dns-prefetch" href="https://cms-xch-chicago.33across.com/">
+<link rel="dns-prefetch" href="https://image4.pubmatic.com/">
+<link rel="dns-prefetch" href="https://ads.yahoo.com/">
+<link rel="dns-prefetch" href="https://ads.betweendigital.com/">
+<link rel="dns-prefetch" href="https://usermatch.krxd.net/">
+<link rel="dns-prefetch" href="https://cms-xch.33across.com/">
+<link rel="dns-prefetch" href="https://acdn.adnxs.com/">
+<link rel="dns-prefetch" href="https://js-sec.indexww.com/">
+<link rel="dns-prefetch" href="https://m.fg8dgt.com/">
+<link rel="dns-prefetch" href="https://match.deepintent.com/">
+<link rel="dns-prefetch" href="https://bttrack.com/">
+<link rel="dns-prefetch" href="https://cm.adgrx.com/">
+<link rel="dns-prefetch" href="https://adservice.google.com/">
+<link rel="dns-prefetch" href="https://378ad08e64cb9e757d2a0c05580fcf42.safeframe.googlesyndication.com/">
+<link rel="dns-prefetch" href="https://tpc.googlesyndication.com/">
+<link rel="dns-prefetch" href="https://static.criteo.net/">
+<link rel="dns-prefetch" href="https://idsync.rlcdn.com/">
+<link rel="dns-prefetch" href="https://dsum.casalemedia.com/">
+<link rel="dns-prefetch" href="https://cdn.ampproject.org/">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/">
+<link rel="dns-prefetch" href="https://track.adthrive.com/">
+<link rel="dns-prefetch" href="https://js.agkn.com/">
+<link rel="dns-prefetch" href="https://insight.adsrvr.org/">
+<link rel="dns-prefetch" href="https://simage4.pubmatic.com/">
+<link rel="dns-prefetch" href="https://www.google.com/">
+<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/">
+<link rel="dns-prefetch" href="https://d.agkn.com/">
+<link rel="dns-prefetch" href="https://www.googletagservices.com/">
+<link rel="dns-prefetch" href="https://aa.agkn.com/">
+<link rel="dns-prefetch" href="https://pixel.mathtag.com/">
+<link rel="dns-prefetch" href="https://c1.adform.net/">
+<link rel="dns-prefetch" href="https://visitor.fiftyt.com/">
+<link rel="dns-prefetch" href="https://pubmatic-match.dotomi.com/">
+<link rel="dns-prefetch" href="https://c.eu1.dyntrk.com/">
+<link rel="dns-prefetch" href="https://c.us1.dyntrk.com/">
+<link rel="dns-prefetch" href="https://match.sharethrough.com/">
+<link rel="dns-prefetch" href="https://ads.creative-serving.com/">
+<link rel="dns-prefetch" href="https://id5-sync.com/">
+<link rel="dns-prefetch" href="https://dis.criteo.com/">
+<link rel="dns-prefetch" href="https://pm.w55c.net/">
+<link rel="dns-prefetch" href="https://ums.acuityplatform.com/">
+<link rel="dns-prefetch" href="https://px.owneriq.net/">
+<link rel="dns-prefetch" href="https://cm.eyereturn.com/">
+<link rel="dns-prefetch" href="https://jadserve.postrelease.com/">
+<link rel="dns-prefetch" href="https://pmp.mxptint.net/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Linux Hint » Feed" href="https://linuxhint.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Linux Hint » Comments Feed" href="https://linuxhint.com/comments/feed/">
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/style.min.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="same-category-posts-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/same-category-posts-5fe3f564ae3b833187a8affa666f0ddb.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="spacexchimp_p005-bootstrap-tooltip-css-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/bootstrap-tooltip-5eeef2e1bcdf4321d4fc0ea38391086d.css" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="spacexchimp_p005-frontend-css-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/frontend-bcf046e1cd3e3be96d84cd3442464875.css" type="text/css" media="all">
+<style id="spacexchimp_p005-frontend-css-inline-css" type="text/css">
+
+                    .sxc-follow-buttons {
+                        text-align: center !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button,
+                    .sxc-follow-buttons .sxc-follow-button a,
+                    .sxc-follow-buttons .sxc-follow-button a img {
+                        width: 64px !important;
+                        height: 64px !important;
+                    }
+                    .sxc-follow-buttons .sxc-follow-button {
+                        margin: 5px !important;
+                    }
+                  
+</style>
+<link rel="stylesheet" id="vce-fonts-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/css(2)" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="vce-style-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/min-9a101f68ae9fbb735df97e70aeded4a8.css" type="text/css" media="all">
+<style id="vce-style-inline-css" type="text/css">
+body, button, input, select, textarea {font-size: 1.6rem;}.vce-single .entry-headline p{font-size: 2.2rem;}.main-navigation a{font-size: 1.4rem;}.sidebar .widget-title{font-size: 1.8rem;}.sidebar .widget, .vce-lay-c .entry-content, .vce-lay-h .entry-content {font-size: 1.4rem;}.vce-featured-link-article{font-size: 5.2rem;}.vce-featured-grid-big.vce-featured-grid .vce-featured-link-article{font-size: 3.4rem;}.vce-featured-grid .vce-featured-link-article{font-size: 2.2rem;}h1 { font-size: 4.5rem; }h2 { font-size: 4.0rem; }h3 { font-size: 3.5rem; }h4 { font-size: 2.5rem; }h5 { font-size: 2.0rem; }h6 { font-size: 1.8rem; }.comment-reply-title, .main-box-title{font-size: 2.2rem;}h1.entry-title{font-size: 4.5rem;}.vce-lay-a .entry-title a{font-size: 3.4rem;}.vce-lay-b .entry-title{font-size: 2.4rem;}.vce-lay-c .entry-title, .vce-sid-none .vce-lay-c .entry-title{font-size: 2.2rem;}.vce-lay-d .entry-title{font-size: 1.5rem;}.vce-lay-e .entry-title{font-size: 1.4rem;}.vce-lay-f .entry-title{font-size: 1.4rem;}.vce-lay-g .entry-title a, .vce-lay-g .entry-title a:hover{font-size: 3.0rem;}.vce-lay-h .entry-title{font-size: 2.4rem;}.entry-meta div,.entry-meta div a,.vce-lay-g .meta-item,.vce-lay-c .meta-item{font-size: 1.4rem;}.vce-lay-d .meta-category a,.vce-lay-d .entry-meta div,.vce-lay-d .entry-meta div a,.vce-lay-e .entry-meta div,.vce-lay-e .entry-meta div a,.vce-lay-e .fn,.vce-lay-e .meta-item{font-size: 1.3rem;}body {background-color:#f0f0f0;}body,.mks_author_widget h3,.site-description,.meta-category a,textarea {font-family: 'Poppins';font-weight: 400;}h1,h2,h3,h4,h5,h6,blockquote,.vce-post-link,.site-title,.site-title a,.main-box-title,.comment-reply-title,.entry-title a,.vce-single .entry-headline p,.vce-prev-next-link,.author-title,.mks_pullquote,.widget_rss ul li .rsswidget,#bbpress-forums .bbp-forum-title,#bbpress-forums .bbp-topic-permalink {font-family: 'Poppins';font-weight: 400;}.main-navigation a,.sidr a{font-family: 'Poppins';font-weight: 600;}.vce-single .entry-content,.vce-single .entry-headline,.vce-single .entry-footer,.vce-share-bar {width: 760px;}.vce-lay-a .lay-a-content{width: 760px;max-width: 760px;}.vce-page .entry-content,.vce-page .entry-title-page {width: 600px;}.vce-sid-none .vce-single .entry-content,.vce-sid-none .vce-single .entry-headline,.vce-sid-none .vce-single .entry-footer {width: 800px;}.vce-sid-none .vce-page .entry-content,.vce-sid-none .vce-page .entry-title-page,.error404 .entry-content {width: 750px;max-width: 750px;}body, button, input, select, textarea{color: #444444;}h1,h2,h3,h4,h5,h6,.entry-title a,.prev-next-nav a,#bbpress-forums .bbp-forum-title, #bbpress-forums .bbp-topic-permalink,.woocommerce ul.products li.product .price .amount{color: #444444;}a,.entry-title a:hover,.vce-prev-next-link:hover,.vce-author-links a:hover,.required,.error404 h4,.prev-next-nav a:hover,#bbpress-forums .bbp-forum-title:hover, #bbpress-forums .bbp-topic-permalink:hover,.woocommerce ul.products li.product h3:hover,.woocommerce ul.products li.product h3:hover mark,.main-box-title a:hover{color: #cf4d35;}.vce-square,.vce-main-content .mejs-controls .mejs-time-rail .mejs-time-current,button,input[type="button"],input[type="reset"],input[type="submit"],.vce-button,.pagination-wapper a,#vce-pagination .next.page-numbers,#vce-pagination .prev.page-numbers,#vce-pagination .page-numbers,#vce-pagination .page-numbers.current,.vce-link-pages a,#vce-pagination a,.vce-load-more a,.vce-slider-pagination .owl-nav > div,.vce-mega-menu-posts-wrap .owl-nav > div,.comment-reply-link:hover,.vce-featured-section a,.vce-lay-g .vce-featured-info .meta-category a,.vce-404-menu a,.vce-post.sticky .meta-image:before,#vce-pagination .page-numbers:hover,#bbpress-forums .bbp-pagination .current,#bbpress-forums .bbp-pagination a:hover,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button,.woocommerce ul.products li.product .added_to_cart,.woocommerce #respond input#submit:hover,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button:hover,.woocommerce ul.products li.product .added_to_cart:hover,.woocommerce #respond input#submit.alt,.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce input.button.alt,.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,.woocommerce span.onsale,.woocommerce .widget_price_filter .ui-slider .ui-slider-range,.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.comments-holder .navigation .page-numbers.current,.vce-lay-a .vce-read-more:hover,.vce-lay-c .vce-read-more:hover{background-color: #cf4d35;}#vce-pagination .page-numbers,.comments-holder .navigation .page-numbers{background: transparent;color: #cf4d35;border: 1px solid #cf4d35;}.comments-holder .navigation .page-numbers:hover{background: #cf4d35;border: 1px solid #cf4d35;}.bbp-pagination-links a{background: transparent;color: #cf4d35;border: 1px solid #cf4d35 !important;}#vce-pagination .page-numbers.current,.bbp-pagination-links span.current,.comments-holder .navigation .page-numbers.current{border: 1px solid #cf4d35;}.widget_categories .cat-item:before,.widget_categories .cat-item .count{background: #cf4d35;}.comment-reply-link,.vce-lay-a .vce-read-more,.vce-lay-c .vce-read-more{border: 1px solid #cf4d35;}.entry-meta div,.entry-meta-count,.entry-meta div a,.comment-metadata a,.meta-category span,.meta-author-wrapped,.wp-caption .wp-caption-text,.widget_rss .rss-date,.sidebar cite,.site-footer cite,.sidebar .vce-post-list .entry-meta div,.sidebar .vce-post-list .entry-meta div a,.sidebar .vce-post-list .fn,.sidebar .vce-post-list .fn a,.site-footer .vce-post-list .entry-meta div,.site-footer .vce-post-list .entry-meta div a,.site-footer .vce-post-list .fn,.site-footer .vce-post-list .fn a,#bbpress-forums .bbp-topic-started-by,#bbpress-forums .bbp-topic-started-in,#bbpress-forums .bbp-forum-info .bbp-forum-content,#bbpress-forums p.bbp-topic-meta,span.bbp-admin-links a,.bbp-reply-post-date,#bbpress-forums li.bbp-header,#bbpress-forums li.bbp-footer,.woocommerce .woocommerce-result-count,.woocommerce .product_meta{color: #9b9b9b;}.main-box-title, .comment-reply-title, .main-box-head{background: #cf4d35;color: #ffffff;}.main-box-title a{color: #ffffff;}.sidebar .widget .widget-title a{color: #ffffff;}.main-box,.comment-respond,.prev-next-nav{background: #f9f9f9;}.vce-post,ul.comment-list > li.comment,.main-box-single,.ie8 .vce-single,#disqus_thread,.vce-author-card,.vce-author-card .vce-content-outside,.mks-bredcrumbs-container,ul.comment-list > li.pingback{background: #ffffff;}.mks_tabs.horizontal .mks_tab_nav_item.active{border-bottom: 1px solid #ffffff;}.mks_tabs.horizontal .mks_tab_item,.mks_tabs.vertical .mks_tab_nav_item.active,.mks_tabs.horizontal .mks_tab_nav_item.active{background: #ffffff;}.mks_tabs.vertical .mks_tab_nav_item.active{border-right: 1px solid #ffffff;}#vce-pagination,.vce-slider-pagination .owl-controls,.vce-content-outside,.comments-holder .navigation{background: #f3f3f3;}.sidebar .widget-title{background: #ffffff;color: #dd3333;}.sidebar .widget{background: #f9f9f9;}.sidebar .widget,.sidebar .widget li a,.sidebar .mks_author_widget h3 a,.sidebar .mks_author_widget h3,.sidebar .vce-search-form .vce-search-input,.sidebar .vce-search-form .vce-search-input:focus{color: #444444;}.sidebar .widget li a:hover,.sidebar .widget a,.widget_nav_menu li.menu-item-has-children:hover:after,.widget_pages li.page_item_has_children:hover:after{color: #cf4d35;}.sidebar .tagcloud a {border: 1px solid #cf4d35;}.sidebar .mks_author_link,.sidebar .tagcloud a:hover,.sidebar .mks_themeforest_widget .more,.sidebar button,.sidebar input[type="button"],.sidebar input[type="reset"],.sidebar input[type="submit"],.sidebar .vce-button,.sidebar .bbp_widget_login .button{background-color: #cf4d35;}.sidebar .mks_author_widget .mks_autor_link_wrap,.sidebar .mks_themeforest_widget .mks_read_more,.widget .meks-instagram-follow-link {background: #f3f3f3;}.sidebar #wp-calendar caption,.sidebar .recentcomments,.sidebar .post-date,.sidebar #wp-calendar tbody{color: rgba(68,68,68,0.7);}.site-footer{background: #373941;}.site-footer .widget-title{color: #ffffff;}.site-footer,.site-footer .widget,.site-footer .widget li a,.site-footer .mks_author_widget h3 a,.site-footer .mks_author_widget h3,.site-footer .vce-search-form .vce-search-input,.site-footer .vce-search-form .vce-search-input:focus{color: #ccd2d8;}.site-footer .widget li a:hover,.site-footer .widget a,.site-info a{color: #cf4d35;}.site-footer .tagcloud a {border: 1px solid #cf4d35;}.site-footer .mks_author_link,.site-footer .mks_themeforest_widget .more,.site-footer button,.site-footer input[type="button"],.site-footer input[type="reset"],.site-footer input[type="submit"],.site-footer .vce-button,.site-footer .tagcloud a:hover{background-color: #cf4d35;}.site-footer #wp-calendar caption,.site-footer .recentcomments,.site-footer .post-date,.site-footer #wp-calendar tbody,.site-footer .site-info{color: rgba(204,210,216,0.7);}.top-header,.top-nav-menu li .sub-menu{background: #2c2d34;}.top-header,.top-header a{color: #ffffff;}.top-header .vce-search-form .vce-search-input,.top-header .vce-search-input:focus,.top-header .vce-search-submit{color: #ffffff;}.top-header .vce-search-form .vce-search-input::-webkit-input-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input::-moz-placeholder { color: #ffffff;}.top-header .vce-search-form .vce-search-input:-ms-input-placeholder { color: #ffffff;}.header-1-wrapper{height: 100px;padding-top: 15px;}.header-2-wrapper,.header-3-wrapper{height: 100px;}.header-2-wrapper .site-branding,.header-3-wrapper .site-branding{top: 15px;left: 0px;}.site-title a, .site-title a:hover{color: #23282d;}.site-description{color: #aaaaaa;}.main-header{background-color: #000000;}.header-bottom-wrapper{background: #e64338;}.vce-header-ads{margin: 5px 0;}.header-3-wrapper .nav-menu > li > a{padding: 40px 15px;}.header-sticky,.sidr{background: rgba(0,0,0,0.95);}.ie8 .header-sticky{background: #000000;}.main-navigation a,.nav-menu .vce-mega-menu > .sub-menu > li > a,.sidr li a,.vce-menu-parent{color: #ffffff;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul li:hover > a,.nav-menu ul .current-menu-item a,.nav-menu ul .current_page_item a,.vce-menu-parent:hover,.sidr li a:hover,.sidr li.sidr-class-current_page_item > a,.main-navigation li.current-menu-item.fa:before,.vce-responsive-nav{color: #ff0505;}#sidr-id-vce_main_navigation_menu .soc-nav-menu li a:hover {color: #ffffff;}.nav-menu > li:hover > a,.nav-menu > .current_page_item > a,.nav-menu > .current-menu-item > a,.nav-menu > .current-menu-ancestor > a,.main-navigation a.vce-item-selected,.main-navigation ul ul,.header-sticky .nav-menu > .current_page_item:hover > a,.header-sticky .nav-menu > .current-menu-item:hover > a,.header-sticky .nav-menu > .current-menu-ancestor:hover > a,.header-sticky .main-navigation a.vce-item-selected:hover{background-color: #000000;}.search-header-wrap ul {border-top: 2px solid #ff0505;}.vce-cart-icon a.vce-custom-cart span,.sidr-class-vce-custom-cart .sidr-class-vce-cart-count {background: #ff0505;font-family: 'Poppins';}.vce-border-top .main-box-title{border-top: 2px solid #cf4d35;}.tagcloud a:hover,.sidebar .widget .mks_author_link,.sidebar .widget.mks_themeforest_widget .more,.site-footer .widget .mks_author_link,.site-footer .widget.mks_themeforest_widget .more,.vce-lay-g .entry-meta div,.vce-lay-g .fn,.vce-lay-g .fn a{color: #FFF;}.vce-featured-header .vce-featured-header-background{opacity: 0.5}.vce-featured-grid .vce-featured-header-background,.vce-post-big .vce-post-img:after,.vce-post-slider .vce-post-img:after{opacity: 0.5}.vce-featured-grid .owl-item:hover .vce-grid-text .vce-featured-header-background,.vce-post-big li:hover .vce-post-img:after,.vce-post-slider li:hover .vce-post-img:after {opacity: 0.8}.vce-featured-grid.vce-featured-grid-big .vce-featured-header-background,.vce-post-big .vce-post-img:after,.vce-post-slider .vce-post-img:after{opacity: 0.5}.vce-featured-grid.vce-featured-grid-big .owl-item:hover .vce-grid-text .vce-featured-header-background,.vce-post-big li:hover .vce-post-img:after,.vce-post-slider li:hover .vce-post-img:after {opacity: 0.8}#back-top {background: #323232}.sidr input[type=text]{background: rgba(255,255,255,0.1);color: rgba(255,255,255,0.5);}.is-style-solid-color{background-color: #cf4d35;color: #ffffff;}.wp-block-image figcaption{color: #9b9b9b;}.wp-block-cover .wp-block-cover-image-text, .wp-block-cover .wp-block-cover-text, .wp-block-cover h2, .wp-block-cover-image .wp-block-cover-image-text, .wp-block-cover-image .wp-block-cover-text, .wp-block-cover-image h2,p.has-drop-cap:not(:focus)::first-letter,p.wp-block-subhead{font-family: 'Poppins';font-weight: 400;}.wp-block-cover .wp-block-cover-image-text, .wp-block-cover .wp-block-cover-text, .wp-block-cover h2, .wp-block-cover-image .wp-block-cover-image-text, .wp-block-cover-image .wp-block-cover-text, .wp-block-cover-image h2{font-size: 2.5rem;}p.wp-block-subhead{font-size: 2.2rem;}.wp-block-button__link{background: #cf4d35}.wp-block-search .wp-block-search__button{color: #ffffff}.meta-image:hover a img,.vce-lay-h .img-wrap:hover .meta-image > img,.img-wrp:hover img,.vce-gallery-big:hover img,.vce-gallery .gallery-item:hover img,.wp-block-gallery .blocks-gallery-item:hover img,.vce_posts_widget .vce-post-big li:hover img,.vce-featured-grid .owl-item:hover img,.vce-post-img:hover img,.mega-menu-img:hover img{-webkit-transform: scale(1.1);-moz-transform: scale(1.1);-o-transform: scale(1.1);-ms-transform: scale(1.1);transform: scale(1.1);}.has-small-font-size{ font-size: 1.2rem;}.has-large-font-size{ font-size: 1.9rem;}.has-huge-font-size{ font-size: 2.3rem;}@media(min-width: 671px){.has-small-font-size{ font-size: 1.3rem;}.has-normal-font-size{ font-size: 1.6rem;}.has-large-font-size{ font-size: 2.1rem;}.has-huge-font-size{ font-size: 2.8rem;}}.has-vce-acc-background-color{ background-color: #cf4d35;}.has-vce-acc-color{ color: #cf4d35;}.has-vce-meta-background-color{ background-color: #9b9b9b;}.has-vce-meta-color{ color: #9b9b9b;}.has-vce-txt-background-color{ background-color: #444444;}.has-vce-txt-color{ color: #444444;}.has-vce-bg-background-color{ background-color: #ffffff;}.has-vce-bg-color{ color: #ffffff;}.has-vce-cat-0-background-color{ background-color: ;}.has-vce-cat-0-color{ color: ;}.site-title a{text-transform: uppercase;}.site-description{text-transform: uppercase;}.nav-menu li a{text-transform: uppercase;}.main-box-title{text-transform: uppercase;}.sidebar .widget-title{text-transform: uppercase;}.site-footer .widget-title{text-transform: uppercase;}.vce-featured-link-article{text-transform: uppercase;}
+</style>
+<link rel="stylesheet" id="vce_child_load_scripts-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/style.css" type="text/css" media="screen">
+<link data-minify="1" rel="stylesheet" id="meks-author-widget-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/style-29d71aa5c6eede85c5e72661d8372a5a.css" type="text/css" media="all">
+<link rel="stylesheet" id="aawp-styles-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/styles.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="__EPYT__style-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/ytprefs.min.css" type="text/css" media="all">
+<style id="__EPYT__style-inline-css" type="text/css">
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style>
+<style id="rocket-lazyload-inline-css" type="text/css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url(https://linuxhint.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat;cursor:pointer}.wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+</style>
+<link data-minify="1" rel="stylesheet" id="codecolorer-css" href="./How to Delete Remote Branch in Git – Linux Hint_files/codecolorer-90f89e7e7ea897139365559b4786c507.css" type="text/css" media="screen">
+<script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/jquery.js" id="jquery-core-js"></script>
+<script data-minify="1" type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/bootstrap-tooltip-e642c32596230f3f2b13a0c1fc3a692a.js" id="spacexchimp_p005-bootstrap-tooltip-js-js" defer=""></script>
+<script type="text/javascript" id="__ytprefs__-js-extra">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https:\/\/linuxhint.com\/wp-admin\/admin-ajax.php","security":"5ae840827a","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/linuxhint.com\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/linuxhint.com\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"13.4.1.2","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/ytprefs.min.js" id="__ytprefs__-js" defer=""></script>
+<link rel="https://api.w.org/" href="https://linuxhint.com/wp-json/"><link rel="alternate" type="application/json" href="https://linuxhint.com/wp-json/wp/v2/posts/42183"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://linuxhint.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://linuxhint.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="How to Use PulseAudio on Arch Linux" href="https://linuxhint.com/pulseaudio_arch_linux/">
+<link rel="next" title="Make beautiful documents from Emacs ORG-Mode" href="https://linuxhint.com/documents_emacs_org_mode/">
+<meta name="generator" content="WordPress 5.5.3">
+<link rel="canonical" href="https://linuxhint.com/git_delete_remote_branch/">
+<link rel="shortlink" href="https://linuxhint.com/?p=42183">
+<link rel="alternate" type="application/json+oembed" href="https://linuxhint.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flinuxhint.com%2Fgit_delete_remote_branch%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://linuxhint.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flinuxhint.com%2Fgit_delete_remote_branch%2F&amp;format=xml">
+<meta name="framework" content="Redux 4.1.23"><style type="text/css">.aawp .aawp-tb__row--highlight{background-color:#256aaf;}.aawp .aawp-tb__row--highlight{color:#fff;}.aawp .aawp-tb__row--highlight a{color:#fff;}</style><!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"R7+fr1O7kI20L7", domain:"linuxhint.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=R7+fr1O7kI20L7" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+<meta name="description" content="In this article, I am going to show you how to delete or remove a remote Git branch. I will use a GitHub repository as a remote Git repository for the demonstration. But, you can use any other remote Git repository hosted on other platforms such as BitBucket, GitLab etc as well.">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./How to Delete Remote Branch in Git – Linux Hint_files/js"></script>
+<script src="data:text/javascript;base64,DQogd2luZG93LmRhdGFMYXllciA9IHdpbmRvdy5kYXRhTGF5ZXIgfHwgW107DQogZnVuY3Rpb24gZ3RhZygpe2RhdGFMYXllci5wdXNoKGFyZ3VtZW50cyk7fQ0KIGd0YWcoJ2pzJywgbmV3IERhdGUoKSk7DQoNCiBndGFnKCdjb25maWcnLCAnVUEtMjU1OTU1MC0xMycseydkaW1lbnNpb24xJzogJ1NoYWhyaWFyIFNob3ZvbicsICdkaW1lbnNpb24yJzogJzIwMTktMDYnfSk7IA0K"></script>
+<meta name="ir-site-verification-token" value="1289819848">		<style type="text/css" id="wp-custom-css">
+			div#wpbody a {
+color: #0000FF;
+}
+
+div#wpbody a:visited {
+color: #0000FF;
+}
+
+h1.entry-title {
+font-size: 38px;
+font-weight: bold;
+}
+
+h1 {
+font-size: 34px;
+font-weight: bold;
+}
+
+h2 {
+font-size: 26px;
+font-weight: bold;
+}
+
+h3 {
+font-size: 26px;
+font-weight: bold;
+}
+
+h4{
+font-weight: bold;
+}
+
+.codecolorer, .codecolorer *, .codecolorer-container, .codecolorer-container * {
+font: 1.4rem/1.4rem Monaco, Lucida Console, monospace ! important;
+}
+
+.comment-form {
+    margin-bottom: inherit;
+}
+
+.gglcptch_v1, .gglcptch_v2 {
+    text-align: -webkit-right;
+}
+
+pre {
+    background: #36363e;
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: floralwhite;
+}
+
+.apsc-theme-1 .apsc-each-profile {
+    margin: 3px;
+}
+
+input[type=text] {
+    background: #fff;
+}
+div#wpbody {
+ font-family: 'Arimo', sans-serif;
+ font-weight: 400;
+ font-size: 1.14286em;
+}
+
+div#wpbody blockquote {
+ font-family: 'Arimo', sans-serif;
+ font-weight: 400;
+ font-size: 0.8em;
+ font-style: italic;
+ font-weight: bold;
+}
+
+div#newshl a {
+color: #000000;
+font-family: 'Arimo', sans-serif;
+font-weight: 400;
+font-size: 1.14286em;
+text-decoration: underline;
+}
+
+div#newshl a:visited {
+color: #000000;
+font-family: 'Arimo', sans-serif;
+font-weight: 400;
+font-size: 1.14286em;
+text-decoration: underline;
+}
+
+div#lhtable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #ba3925;
+  color: white;
+}
+
+div#lhtable tr:nth-child(even){background-color: #f2f2f2;}
+
+div#lhtable tr:hover {background-color: #ddd;}
+
+/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+h1 {
+font-size:25px;
+color: #ba3925;}
+h2 {
+font-size:20px;
+color: #ba3925;}
+h3 {
+font-size:20px;
+color: #ba3925;
+}
+h4 {
+font-size:18px;
+color: #ba3925;
+opacity:0.9;}
+h5 {
+font-size:15px;
+color: #ba3925;}
+h6 {
+font-size:12px;
+color: #ba3925;}
+@media only screen and (max-width: 1200px){
+.codecolorer-container, .codecolorer {
+max-width: 100%;
+	}
+}
+@media only screen and (max-width: 1000px){
+.main-header {
+margin-bottom: 100px;
+	}
+}
+@media only screen and (max-width: 1000px){
+ .vce-header-ads {
+   display: block !important;
+   max-width: 100%;
+	 text-align:center;
+	}
+}
+		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><style id="voice-full-fix" type="text/css">.alignfull { max-width: 670px; position: relative; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); width: 100vw; left: 50%; }</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style type="text/css">.adthrive-ad{margin-top:10px;margin-bottom:10px;text-align:center;overflow-x:visible;clear:both;line-height:0}.adthrive-ad>div[id^=google_ads_iframe]{margin:0 auto!important}.jw-flag-small-player #next-stay-container{margin:0}.jw-flag-small-player #next-video,.jw-flag-small-player #stay-video{width:75px;height:30px;line-height:30px}#next-stay-container{bottom:25%;right:0;margin:12px;position:absolute}#next-video,#stay-video{box-shadow:0 0 10px rgba(0,0,0,.5);opacity:.9;width:100px;height:40px;line-height:40px;text-align:center;cursor:pointer;background-color:#333;color:#fff;margin:10px}#next-video{box-shadow:inset 0 0 0 0 #333;transition:box-shadow 5s linear}#next-stay-container.loaded #next-video{box-shadow:inset 100px 0 0 0 red}.adthrive-ad-cls{display:flex;justify-content:center;align-items:center;flex-wrap:wrap}.adthrive-ad-cls>div,.adthrive-ad-cls>iframe{flex-basis:100%}.adthrive-native-recipe{display:inline-block}.adthrive-stuck.adthrive-sticky.adthrive-header,.adthrive-stuck.adthrive-sticky.adthrive-sidebar{position:fixed;top:0;z-index:9999}.adthrive-stuck.adthrive-header{margin-top:0}.adthrive-sticky.adthrive-footer{text-align:center;margin:0;width:100%;overflow:hidden;position:fixed;left:0;bottom:0;z-index:99999;background-color:hsla(0,0%,100%,.8);border-top:2px solid hsla(0,0%,88.2%,.8)}.adthrive-sticky.adthrive-footer>.adthrive-close{cursor:pointer;color:#b2b2b2;border:1px solid #b2b2b2;border-radius:20px;background:#fff;line-height:20px;display:inline-block;font-size:20px;font-family:arial,sans-serif;padding:0 5px;position:absolute;top:5px;right:5px}.adthrive-device-desktop .adthrive-sticky.adthrive-footer>.adthrive-close{top:10px;right:10px}#_inv_voicefive___{display:none}.adthrive-ccpa-link,.adthrive-footer-message,.adthrive-privacy-preferences{text-align:center;margin-top:5px}.adthrive-ccpa-link,.adthrive-ccpa-link span,.adthrive-footer-message span,.adthrive-privacy-preferences a{font-family:Arial,Helvetica Neue,Helvetica,sans-serif;font-size:13px;color:#b2b2b2}.adthrive-ccpa-link a{text-decoration:underline;cursor:pointer}.adthrive-device-phone .adthrive-footer-message{margin-bottom:60px}.adthrive-footer-message{margin-bottom:100px}.adthrive-footer-message>span{text-transform:uppercase;border-top:1px solid #b2b2b2;padding-top:5px}.adthrive-collapse-player{width:90%;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;padding:8px!important;margin-left:auto;margin-right:auto}.adthrive-player-position.adthrive-collapse-float{position:fixed;width:300px;z-index:2147483644}.adthrive-player-position.adthrive-collapse-float.adthrive-collapse-right{top:0;right:5px}.adthrive-player-position.adthrive-collapse-float.adthrive-collapse-bottom-right{bottom:100px;right:5px}.adthrive-player-position.adthrive-collapse-float.adthrive-collapse-bottom-left{bottom:100px;left:5px}.adthrive-player-position.adthrive-collapse-float>.adthrive-player-title{display:none}.adthrive-player-position.adthrive-collapse-sticky{padding-top:20px;padding-bottom:20px;position:fixed;z-index:9999}.adthrive-player-position.adthrive-collapse-sticky>.adthrive-player-title{display:none}.adthrive-player-position.adthrive-collapse-mobile{position:fixed;width:300px;z-index:2147483644}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-medium,.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-small{width:272px}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-right{top:26px;right:10px}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-top-left{top:26px;left:5px}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-bottom-left{bottom:52px;left:5px}.adthrive-player-position.adthrive-collapse-mobile.adthrive-collapse-bottom-right{bottom:52px;right:10px}.adthrive-player-position.adthrive-collapse-mobile>.adthrive-player-title{display:none}.adthrive-sekindo-mobile-center{display:flex;flex-direction:row;justify-content:center;text-align:center}.adthrive-wrapper-close{margin-left:auto;margin-right:0;height:36px;min-width:36px;justify-content:center;align-items:center;font-size:36px;color:#fff}.adthrive-wrapper-bar{display:none;background-color:#595959;font-family:Arial,Helvetica,sans-serif;border-top-left-radius:5px;border-top-right-radius:5px;height:36px}.adthrive-video-title{font-size:13px;font-weight:700;text-decoration:none;color:#fff}.adthrive-wrapper-title-wrapper{display:inline-flex;min-width:0;margin-left:10px;margin-right:10px;justify-content:center;align-items:center}.adthrive-video-text-cutoff{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;color:#fff}.adthrive-wrapper-title-wrapper>a>svg,.adthrive-wrapper-title-wrapper>div>svg{vertical-align:middle;fill:#fff;margin-right:5px}.adthrive-wrapper-title-wrapper>a{text-decoration:none}</style><script src="./How to Delete Remote Branch in Git – Linux Hint_files/pubads_impl_2020111001.js" async=""></script><link rel="stylesheet" type="text/css" href="./How to Delete Remote Branch in Git – Linux Hint_files/ads.min.css"><link rel="preload" href="./How to Delete Remote Branch in Git – Linux Hint_files/f(5).txt" as="script"><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/f(5).txt"></script><link rel="preload" href="./How to Delete Remote Branch in Git – Linux Hint_files/f(6).txt" as="script"><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/f(6).txt"></script><link rel="prefetch" href="https://624d90952e26671f3fcf62f412b12ee2.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html"><link rel="preload" href="./How to Delete Remote Branch in Git – Linux Hint_files/f(5).txt" as="script"><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/f(5).txt"></script><link rel="preload" href="./How to Delete Remote Branch in Git – Linux Hint_files/f(6).txt" as="script"><script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/f(6).txt"></script></head>
+
+<body class="post-template-default single single-post postid-42183 single-format-standard wp-embed-responsive aawp-custom vce-sid-right voice-v_2_9_2 voice-child adthrive-device-desktop">
+
+
+<div id="vce-main">
+
+<header id="header" class="main-header">
+<div class="container header-main-area header-3-wrapper">	
+		<div class="vce-res-nav">
+	<a class="vce-responsive-nav" href="https://linuxhint.com/git_delete_remote_branch/#sidr-main"><i class="fa fa-bars"></i></a>
+</div>
+<div class="site-branding">
+	<span class="site-title"><a href="https://linuxhint.com/" rel="home" class="has-logo"><picture class="vce-logo"><source media="(min-width: 1024px)" srcset="https://linuxhint.com/wp-content/uploads/2019/11/Logo-final.png"><source srcset="https://linuxhint.com/wp-content/uploads/2019/11/Logo-final.png"><img src="./How to Delete Remote Branch in Git – Linux Hint_files/Logo-final.png" alt="Linux Hint" class="lazyloaded" data-ll-status="loaded"><noscript><img src="https://linuxhint.com/wp-content/uploads/2019/11/Logo-final.png" alt="Linux Hint"></noscript></picture></a></span></div>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+	<ul id="vce_main_navigation_menu" class="nav-menu"><li id="menu-item-18534" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-18534"><a href="https://linuxhint.com/">Home</a></li><li id="menu-item-28744" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28744"><a target="_blank" rel="noopener noreferrer" href="https://help.linuxhint.com/">Help Forum</a></li><li id="menu-item-19816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19816"><a href="https://linuxhint.com/subscribe-to-linuxhint-com/">Subscribe!</a></li><li id="menu-item-33966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33966"><a href="https://linuxhint.com/write-for-linuxhint-com/">Write For Us</a></li><li id="menu-item-23466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23466"><a href="https://linuxhint.com/policies-and-privacy/">Privacy</a></li><li id="menu-item-37290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37290"><a href="https://linuxhint.com/terms-of-use/">Terms</a></li><li class="search-header-wrap"><a class="search_header" href="javascript:void(0)"><i class="fa fa-search"></i></a><ul class="search-header-form-ul"><li><form class="vce-search-form" action="https://linuxhint.com/" method="get">
+	<input name="s" class="vce-search-input" size="20" type="text" value="Type here to search..." onfocus="(this.value == &#39;Type here to search...&#39;) &amp;&amp; (this.value = &#39;&#39;)" onblur="(this.value == &#39;&#39;) &amp;&amp; (this.value = &#39;Type here to search...&#39;)" placeholder="Type here to search...">
+		<button type="submit" class="vce-search-submit"><i class="fa fa-search"></i></button> 
+</form></li></ul></li></ul></nav></div></header>
+
+
+<div id="main-wrapper"><div id="AdThrive_Header_1_desktop" class="adthrive-ad adthrive-header adthrive-header-1" data-google-query-id="CJWfqcadhO0CFeQL0wodPYwGYQ"><div id="google_ads_iframe_/18190176/AdThrive_Header_1/5c9b6001b80bec0dfaf0b493_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/18190176/AdThrive_Header_1/5c9b6001b80bec0dfaf0b493_0" title="3rd party ad content" name="google_ads_iframe_/18190176/AdThrive_Header_1/5c9b6001b80bec0dfaf0b493_0" width="970" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./How to Delete Remote Branch in Git – Linux Hint_files/saved_resource.html"></iframe></div></div>
+
+
+
+
+
+<div id="content" class="container site-content vce-sid-right">
+	
+			
+	<div id="primary" class="vce-main-content">
+
+		<main id="main" class="main-box main-box-single">
+
+		
+			<article id="post-42183" class="vce-single post-42183 post type-post status-publish format-standard has-post-thumbnail hentry category-git">
+
+			<header class="entry-header">
+							<span class="meta-category"><a href="https://linuxhint.com/category/git/" class="category-1514">Git</a></span>
+			
+			<h1 class="entry-title">How to Delete Remote Branch in Git</h1>
+			<div class="entry-meta"><div class="meta-item date"><span class="updated">1 year ago</span></div><div class="meta-item author"><span class="vcard author"><span class="fn">by <a href="https://linuxhint.com/author/shahriar_shovon/">Shahriar Shovon</a></span></span></div></div>
+		</header>
+	
+	
+	
+		
+	    
+		
+	<div class="entry-content">
+		<div id="wpbody">
+In this article, I am going to show you how to delete or remove a remote Git branch. I will use a GitHub repository as a remote Git repository for the demonstration. But, you can use any other remote Git repository hosted on other platforms such as BitBucket, GitLab etc as well.<p></p>
+<h2>Cloning the Remote Git Repository:</h2>
+<p>In this section, I am going to show you how to clone a remote Git repository on your local computer for deleting or removing a branch from the remote Git repository.</p>
+<p>I will use one of my GitHub repository (<a href="https://github.com/dev-shovon/hello-c">https://github.com/dev-shovon/hello-c</a>) for the demonstration.</p>
+<p><img class="aligncenter size-large wp-image-42185 lazyloaded" src="./How to Delete Remote Branch in Git – Linux Hint_files/1-25-1024x479.png" alt="" width="810" height="379" sizes="(max-width: 810px) 100vw, 810px" srcset="https://linuxhint.com/wp-content/uploads/2019/06/1-25-1024x479.png 1024w, https://linuxhint.com/wp-content/uploads/2019/06/1-25-300x140.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/1-25-768x359.png 768w, https://linuxhint.com/wp-content/uploads/2019/06/1-25-810x379.png 810w, https://linuxhint.com/wp-content/uploads/2019/06/1-25.png 1140w" data-ll-status="loaded"><noscript><img class="aligncenter size-large wp-image-42185" src="https://linuxhint.com/wp-content/uploads/2019/06/1-25-1024x479.png" alt="" width="810" height="379" srcset="https://linuxhint.com/wp-content/uploads/2019/06/1-25-1024x479.png 1024w, https://linuxhint.com/wp-content/uploads/2019/06/1-25-300x140.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/1-25-768x359.png 768w, https://linuxhint.com/wp-content/uploads/2019/06/1-25-810x379.png 810w, https://linuxhint.com/wp-content/uploads/2019/06/1-25.png 1140w" sizes="(max-width: 810px) 100vw, 810px" /></noscript></p>
+<p>To clone your desired GitHub repository on your local computer, run the following command:</p><div id="AdThrive_Content_1_desktop" class="adthrive-ad adthrive-content adthrive-content-1" data-google-query-id="COqrqcedhO0CFScf0wodETAJag"><div id="google_ads_iframe_/18190176/AdThrive_Content_1/5c9b6001b80bec0dfaf0b493_0__container__" style="border: 0pt none; display: inline-block; width: 552px; height: 334px;"><iframe frameborder="0" src="./How to Delete Remote Branch in Git – Linux Hint_files/container.html" id="google_ads_iframe_/18190176/AdThrive_Content_1/5c9b6001b80bec0dfaf0b493_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="552" height="334" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="3" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>
+<div class="codecolorer-container bash default" style="overflow:auto;white-space:nowrap;width:680px;"><div class="bash codecolorer"><span class="co4">$ </span><span class="kw2">git clone</span> https:<span class="sy0">//</span>github.com<span class="sy0">/</span>dev-shovon<span class="sy0">/</span>hello-c</div></div>
+<p><img class="aligncenter size-full wp-image-42186 lazyloaded" src="./How to Delete Remote Branch in Git – Linux Hint_files/2-25.png" alt="" width="801" height="76" sizes="(max-width: 801px) 100vw, 801px" srcset="https://linuxhint.com/wp-content/uploads/2019/06/2-25.png 801w, https://linuxhint.com/wp-content/uploads/2019/06/2-25-300x28.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/2-25-768x73.png 768w" data-ll-status="loaded"><noscript><img class="aligncenter size-full wp-image-42186" src="https://linuxhint.com/wp-content/uploads/2019/06/2-25.png" alt="" width="801" height="76" srcset="https://linuxhint.com/wp-content/uploads/2019/06/2-25.png 801w, https://linuxhint.com/wp-content/uploads/2019/06/2-25-300x28.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/2-25-768x73.png 768w" sizes="(max-width: 801px) 100vw, 801px" /></noscript></p>
+<p>The remote Git repository should be cloned.</p>
+<p><img class="aligncenter size-full wp-image-42187 lazyloaded" src="./How to Delete Remote Branch in Git – Linux Hint_files/3-24.png" alt="" width="791" height="214" sizes="(max-width: 791px) 100vw, 791px" srcset="https://linuxhint.com/wp-content/uploads/2019/06/3-24.png 791w, https://linuxhint.com/wp-content/uploads/2019/06/3-24-300x81.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/3-24-768x208.png 768w" data-ll-status="loaded"><noscript><img class="aligncenter size-full wp-image-42187" src="https://linuxhint.com/wp-content/uploads/2019/06/3-24.png" alt="" width="791" height="214" srcset="https://linuxhint.com/wp-content/uploads/2019/06/3-24.png 791w, https://linuxhint.com/wp-content/uploads/2019/06/3-24-300x81.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/3-24-768x208.png 768w" sizes="(max-width: 791px) 100vw, 791px" /></noscript></p>
+<p>A new directory should be created as you can see in the screenshot below.</p>
+<p><img class="aligncenter size-full wp-image-42188 lazyloaded" src="./How to Delete Remote Branch in Git – Linux Hint_files/4-25.png" alt="" width="798" height="166" sizes="(max-width: 798px) 100vw, 798px" srcset="https://linuxhint.com/wp-content/uploads/2019/06/4-25.png 798w, https://linuxhint.com/wp-content/uploads/2019/06/4-25-300x62.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/4-25-768x160.png 768w" data-ll-status="loaded"><noscript><img class="aligncenter size-full wp-image-42188" src="https://linuxhint.com/wp-content/uploads/2019/06/4-25.png" alt="" width="798" height="166" srcset="https://linuxhint.com/wp-content/uploads/2019/06/4-25.png 798w, https://linuxhint.com/wp-content/uploads/2019/06/4-25-300x62.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/4-25-768x160.png 768w" sizes="(max-width: 798px) 100vw, 798px" /></noscript></p>
+<p>Now, navigate to the newly created directory with the following command:</p>
+<div class="codecolorer-container bash default" style="overflow:auto;white-space:nowrap;width:435px;"><div class="bash codecolorer"><span class="co4">$ </span><span class="kw3">cd</span> hello-c<span class="sy0">/</span></div></div>
+<p><img class="aligncenter size-full wp-image-42189 lazyloaded" src="./How to Delete Remote Branch in Git – Linux Hint_files/5-24.png" alt="" width="798" height="97" sizes="(max-width: 798px) 100vw, 798px" srcset="https://linuxhint.com/wp-content/uploads/2019/06/5-24.png 798w, https://linuxhint.com/wp-content/uploads/2019/06/5-24-300x36.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/5-24-768x93.png 768w" data-ll-status="loaded"><noscript><img class="aligncenter size-full wp-image-42189" src="https://linuxhint.com/wp-content/uploads/2019/06/5-24.png" alt="" width="798" height="97" srcset="https://linuxhint.com/wp-content/uploads/2019/06/5-24.png 798w, https://linuxhint.com/wp-content/uploads/2019/06/5-24-300x36.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/5-24-768x93.png 768w" sizes="(max-width: 798px) 100vw, 798px" /></noscript></p>
+<h3>Listing Remote Branches:</h3>
+<p>Before you delete or remove a remote Git branch, it is important to know what remote branches are available. You can get a list of all the remote Git branches from the command line very easily.</p><div id="AdThrive_Content_2_desktop" class="adthrive-ad adthrive-content adthrive-content-1" data-google-query-id="CPi7qsedhO0CFRMo0wodFaIKbQ"><div id="google_ads_iframe_/18190176/AdThrive_Content_2/5c9b6001b80bec0dfaf0b493_0__container__" style="border: 0pt none; display: inline-block; width: 552px; height: 334px;"><iframe frameborder="0" src="./How to Delete Remote Branch in Git – Linux Hint_files/container(1).html" id="google_ads_iframe_/18190176/AdThrive_Content_2/5c9b6001b80bec0dfaf0b493_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="552" height="334" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="5" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>
+<p>To list all the Git remote branches, run the following command:</p>
+<div class="codecolorer-container bash default" style="overflow:auto;white-space:nowrap;width:435px;"><div class="bash codecolorer"><span class="co4">$ </span><span class="kw2">git branch</span> <span class="re5">--remotes</span></div></div>
+<p><img class="aligncenter size-full wp-image-42190 lazyloaded" src="./How to Delete Remote Branch in Git – Linux Hint_files/6-22.png" alt="" width="800" height="84" sizes="(max-width: 800px) 100vw, 800px" srcset="https://linuxhint.com/wp-content/uploads/2019/06/6-22.png 800w, https://linuxhint.com/wp-content/uploads/2019/06/6-22-300x32.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/6-22-768x81.png 768w" data-ll-status="loaded"><noscript><img class="aligncenter size-full wp-image-42190" src="https://linuxhint.com/wp-content/uploads/2019/06/6-22.png" alt="" width="800" height="84" srcset="https://linuxhint.com/wp-content/uploads/2019/06/6-22.png 800w, https://linuxhint.com/wp-content/uploads/2019/06/6-22-300x32.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/6-22-768x81.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></noscript></p>
+<p>As you can see, all the remote branches are listed. Let’s remove the <strong>origin</strong>/<strong>improved</strong> branch. Here, <strong>origin</strong> is the name of the remote repository and <strong>improved</strong> is the name of the remote branch.</p>
+<p><img class="aligncenter size-full wp-image-42191 lazyloaded" src="./How to Delete Remote Branch in Git – Linux Hint_files/7-21.png" alt="" width="801" height="158" sizes="(max-width: 801px) 100vw, 801px" srcset="https://linuxhint.com/wp-content/uploads/2019/06/7-21.png 801w, https://linuxhint.com/wp-content/uploads/2019/06/7-21-300x59.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/7-21-768x151.png 768w" data-ll-status="loaded"><noscript><img class="aligncenter size-full wp-image-42191" src="https://linuxhint.com/wp-content/uploads/2019/06/7-21.png" alt="" width="801" height="158" srcset="https://linuxhint.com/wp-content/uploads/2019/06/7-21.png 801w, https://linuxhint.com/wp-content/uploads/2019/06/7-21-300x59.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/7-21-768x151.png 768w" sizes="(max-width: 801px) 100vw, 801px" /></noscript></p>
+<h3>Removing Remote Repository:</h3>
+<p>To remove the <strong>improved</strong> branch from the <strong>origin</strong> repository, you can run one of the following commands:</p>
+<div class="codecolorer-container bash default" style="overflow:auto;white-space:nowrap;width:680px;"><div class="bash codecolorer">$ <span class="kw2">git push</span> origin <span class="re5">-d</span> improved<br>
+Or,<br>
+$ <span class="kw2">git push</span> origin <span class="re5">--delete</span> improved</div></div>
+<p><img class="aligncenter size-full wp-image-42192 lazyloaded" src="./How to Delete Remote Branch in Git – Linux Hint_files/8-21.png" alt="" width="801" height="77" sizes="(max-width: 801px) 100vw, 801px" srcset="https://linuxhint.com/wp-content/uploads/2019/06/8-21.png 801w, https://linuxhint.com/wp-content/uploads/2019/06/8-21-300x29.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/8-21-768x74.png 768w" data-ll-status="loaded"><noscript><img class="aligncenter size-full wp-image-42192" src="https://linuxhint.com/wp-content/uploads/2019/06/8-21.png" alt="" width="801" height="77" srcset="https://linuxhint.com/wp-content/uploads/2019/06/8-21.png 801w, https://linuxhint.com/wp-content/uploads/2019/06/8-21-300x29.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/8-21-768x74.png 768w" sizes="(max-width: 801px) 100vw, 801px" /></noscript></p>
+<p>Or,</p>
+<div class="codecolorer-container bash default" style="overflow:auto;white-space:nowrap;width:435px;"><div class="bash codecolorer"><span class="co4">$ </span><span class="kw2">git push</span> origin :improved</div></div>
+<p><strong><u>NOTE:</u></strong> A colon (<strong>:</strong>) before the branch name has the same effect as the <strong>-d</strong> or <strong>–delete</strong> option of <strong>git push</strong>.</p><div id="AdThrive_Content_3_desktop" class="adthrive-ad adthrive-content adthrive-content-1" data-google-query-id="CNKoqsedhO0CFZUX0wodAyIHAw"><div id="google_ads_iframe_/18190176/AdThrive_Content_3/5c9b6001b80bec0dfaf0b493_0__container__" style="border: 0pt none; display: inline-block; width: 552px; height: 334px;"><iframe frameborder="0" src="./How to Delete Remote Branch in Git – Linux Hint_files/container(2).html" id="google_ads_iframe_/18190176/AdThrive_Content_3/5c9b6001b80bec0dfaf0b493_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="552" height="334" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="4" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div>
+<p><img class="aligncenter size-full wp-image-42193" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20791%2072&#39;%3E%3C/svg%3E" alt="" width="791" height="72" data-lazy-srcset="https://linuxhint.com/wp-content/uploads/2019/06/9-21.png 791w, https://linuxhint.com/wp-content/uploads/2019/06/9-21-300x27.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/9-21-768x70.png 768w" data-lazy-sizes="(max-width: 791px) 100vw, 791px" data-lazy-src="https://linuxhint.com/wp-content/uploads/2019/06/9-21.png"><noscript><img class="aligncenter size-full wp-image-42193" src="https://linuxhint.com/wp-content/uploads/2019/06/9-21.png" alt="" width="791" height="72" srcset="https://linuxhint.com/wp-content/uploads/2019/06/9-21.png 791w, https://linuxhint.com/wp-content/uploads/2019/06/9-21-300x27.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/9-21-768x70.png 768w" sizes="(max-width: 791px) 100vw, 791px" /></noscript></p>
+<p>You will be prompted for the username and password of your remote Git repository. For GitHub, it is the login details of your GitHub account. Once you provide the login details, the remote Git branch (<strong>improved</strong> in this case) should be removed.</p>
+<p><img class="aligncenter size-full wp-image-42194" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20796%20176&#39;%3E%3C/svg%3E" alt="" width="796" height="176" data-lazy-srcset="https://linuxhint.com/wp-content/uploads/2019/06/10-19.png 796w, https://linuxhint.com/wp-content/uploads/2019/06/10-19-300x66.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/10-19-768x170.png 768w" data-lazy-sizes="(max-width: 796px) 100vw, 796px" data-lazy-src="https://linuxhint.com/wp-content/uploads/2019/06/10-19.png"><noscript><img class="aligncenter size-full wp-image-42194" src="https://linuxhint.com/wp-content/uploads/2019/06/10-19.png" alt="" width="796" height="176" srcset="https://linuxhint.com/wp-content/uploads/2019/06/10-19.png 796w, https://linuxhint.com/wp-content/uploads/2019/06/10-19-300x66.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/10-19-768x170.png 768w" sizes="(max-width: 796px) 100vw, 796px" /></noscript></p>
+<p>As you can see, the remote branch <strong>origin</strong>/<strong>improved</strong> is no longer listed.</p>
+<div class="codecolorer-container bash default" style="overflow:auto;white-space:nowrap;width:435px;"><div class="bash codecolorer"><span class="co4">$ </span><span class="kw2">git branch</span> <span class="re5">--remotes</span></div></div>
+<p><img class="aligncenter size-full wp-image-42195" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20806%2084&#39;%3E%3C/svg%3E" alt="" width="806" height="84" data-lazy-srcset="https://linuxhint.com/wp-content/uploads/2019/06/11-19.png 806w, https://linuxhint.com/wp-content/uploads/2019/06/11-19-300x31.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/11-19-768x80.png 768w" data-lazy-sizes="(max-width: 806px) 100vw, 806px" data-lazy-src="https://linuxhint.com/wp-content/uploads/2019/06/11-19.png"><noscript><img class="aligncenter size-full wp-image-42195" src="https://linuxhint.com/wp-content/uploads/2019/06/11-19.png" alt="" width="806" height="84" srcset="https://linuxhint.com/wp-content/uploads/2019/06/11-19.png 806w, https://linuxhint.com/wp-content/uploads/2019/06/11-19-300x31.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/11-19-768x80.png 768w" sizes="(max-width: 806px) 100vw, 806px" /></noscript></p>
+<p>As you can see, the branch <strong>improved</strong> is not listed on my GitHub repository as well. So, it is removed for good.</p>
+<p><img class="aligncenter size-large wp-image-42196" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20810%20373&#39;%3E%3C/svg%3E" alt="" width="810" height="373" data-lazy-srcset="https://linuxhint.com/wp-content/uploads/2019/06/12-18-1024x472.png 1024w, https://linuxhint.com/wp-content/uploads/2019/06/12-18-300x138.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/12-18-768x354.png 768w, https://linuxhint.com/wp-content/uploads/2019/06/12-18-810x374.png 810w, https://linuxhint.com/wp-content/uploads/2019/06/12-18.png 1140w" data-lazy-sizes="(max-width: 810px) 100vw, 810px" data-lazy-src="https://linuxhint.com/wp-content/uploads/2019/06/12-18-1024x472.png"><noscript><img class="aligncenter size-large wp-image-42196" src="https://linuxhint.com/wp-content/uploads/2019/06/12-18-1024x472.png" alt="" width="810" height="373" srcset="https://linuxhint.com/wp-content/uploads/2019/06/12-18-1024x472.png 1024w, https://linuxhint.com/wp-content/uploads/2019/06/12-18-300x138.png 300w, https://linuxhint.com/wp-content/uploads/2019/06/12-18-768x354.png 768w, https://linuxhint.com/wp-content/uploads/2019/06/12-18-810x374.png 810w, https://linuxhint.com/wp-content/uploads/2019/06/12-18.png 1140w" sizes="(max-width: 810px) 100vw, 810px" /></noscript></p>
+<p>So, that’s how you delete or remove a remote branch in Git. Thanks for reading this article.
+</p><div id="AdThrive_Content_4_desktop" class="adthrive-ad adthrive-content adthrive-content-1" data-google-query-id="CPrgxMedhO0CFc_E3godf6UDTw"><div id="google_ads_iframe_/18190176/AdThrive_Content_4/5c9b6001b80bec0dfaf0b493_0__container__" style="border: 0pt none; display: inline-block; width: 552px; height: 334px;"><iframe frameborder="0" src="./How to Delete Remote Branch in Git – Linux Hint_files/container(3).html" id="google_ads_iframe_/18190176/AdThrive_Content_4/5c9b6001b80bec0dfaf0b493_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="552" height="334" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="6" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div></div>
+	<div id="AdThrive_Below_Post_1_desktop" class="adthrive-ad adthrive-below-post adthrive-below-post-1"><div id="google_ads_iframe_/18190176/AdThrive_Below_Post_1/5c9b6001b80bec0dfaf0b493_0__container__" style="border: 0pt none; display: inline-block;"></div></div></div>
+
+	
+			<footer class="entry-footer">
+			<div class="meta-tags">
+							</div>
+		</footer>
+	
+	
+	 
+</article>
+		
+		
+		</main>
+
+		
+		
+					
+	<section class="main-box mbt-border-top author-box">
+
+		<h3 class="main-box-title">About the author</h3>
+
+		<div class="main-box-inside">
+
+		<div class="data-image">
+			<img src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20112%20112&#39;%3E%3C/svg%3E" width="112" height="112" alt="Shahriar Shovon" class="avatar avatar-112 wp-user-avatar wp-user-avatar-112 alignnone photo" data-lazy-src="https://linuxhint.com/wp-content/uploads/2018/01/photo2-150x150.png"><noscript><img src="https://linuxhint.com/wp-content/uploads/2018/01/photo2-150x150.png" width="112" height="112" alt="Shahriar Shovon" class="avatar avatar-112 wp-user-avatar wp-user-avatar-112 alignnone photo" /></noscript>		</div>
+		
+		<div class="data-content">
+			<h4 class="author-title">Shahriar Shovon</h4>
+			<div class="data-entry-content">
+				<p>Freelancer &amp; Linux System Administrator. Also loves Web API development with Node.js and JavaScript.  I was born in Bangladesh. I am currently studying Electronics and Communication Engineering at Khulna University of Engineering &amp; Technology (KUET), one of the demanding public engineering universities of Bangladesh.</p>
+			</div>
+		</div>
+
+		</div>
+
+		<div class="vce-content-outside">
+			<div class="data-links">
+					<a href="https://linuxhint.com/author/shahriar_shovon/" class="vce-author-link vce-button">View all posts</a>
+			</div>
+			<div class="vce-author-links">
+											
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+												
+									
+			</div>
+		</div>
+
+	</section>
+
+		
+		
+
+	</div>
+
+		<aside id="sidebar" class="sidebar right" style="min-height: 478px;">
+		<div id="same-category-posts-2" class="widget same-category-posts"><h4 class="widget-title"><span>RELATED LINUX HINT POSTS</span></h4><ul>
+<li class="same-category-post-item "><a class="post-title" href="https://linuxhint.com/git_clone_command/" rel="bookmark" title="Permanent Link to How to use Git Clone Command?">How to use Git Clone Command?</a></li><li class="same-category-post-item "><a class="post-title" href="https://linuxhint.com/howto_git_rebase/" rel="bookmark" title="Permanent Link to How to Git Rebase">How to Git Rebase</a></li><li class="same-category-post-item "><a class="post-title" href="https://linuxhint.com/git_blame/" rel="bookmark" title="Permanent Link to How to Use git blame">How to Use git blame</a></li><li class="same-category-post-item "><a class="post-title" href="https://linuxhint.com/git_cherry_pick/" rel="bookmark" title="Permanent Link to How to Cherry Pick in Git">How to Cherry Pick in Git</a></li><li class="same-category-post-item "><a class="post-title" href="https://linuxhint.com/undo_last_commit_git/" rel="bookmark" title="Permanent Link to How to Undo Last Commit in Git">How to Undo Last Commit in Git</a></li><li class="same-category-post-item "><a class="post-title" href="https://linuxhint.com/push_changes_remote_git_branch/" rel="bookmark" title="Permanent Link to Git – Push Changes to Remote Git Branch">Git – Push Changes to Remote Git Branch</a></li><li class="same-category-post-item same-category-post-current"><a class="post-title" href="https://linuxhint.com/git_delete_remote_branch/" rel="bookmark" title="Permanent Link to How to Delete Remote Branch in Git">How to Delete Remote Branch in Git</a></li></ul>
+</div>	<div id="AdThrive_Sidebar_9_desktop" class="adthrive-ad adthrive-sidebar adthrive-sidebar-9 adthrive-sticky" data-google-query-id="CJaoguWdhO0CFQU40wodwEQIJw" style="width: 300px;"><div id="google_ads_iframe_/18190176/AdThrive_Sidebar_9/5c9b6001b80bec0dfaf0b493_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 600px;"><iframe frameborder="0" src="./How to Delete Remote Branch in Git – Linux Hint_files/container(4).html" id="google_ads_iframe_/18190176/AdThrive_Sidebar_9/5c9b6001b80bec0dfaf0b493_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="600" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="c" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div></div></aside>
+
+</div>
+
+
+
+
+	<footer id="footer" class="site-footer">
+
+				<div class="container">
+			<div class="container-fix">
+										<div class="bit-1">
+									</div>
+						</div>
+		</div>
+		
+					<div class="container-full site-info">
+				<div class="container">
+					
+						
+
+											<div class="vce-wrap-center">
+							<p>Powered by <a href="https://linuxhint.com/liquidweb-web-hosting/">LiquidWeb Web Hosting</a><br>
+<strong>Linux Hint LLC, editor@linuxhint.com<br>
+1210 Kelly Park Cir, Morgan Hill, CA 95037<br>
+</strong></p>						</div>
+					
+			
+				</div>
+			</div>
+		
+
+	</footer>
+
+
+</div>
+</div>
+
+<a href="javascript:void(0)" id="back-top" style="display: none;"><i class="fa fa-angle-up"></i></a>
+
+<div id="amzn-assoc-ad-1438d7d4-c08f-4515-a13e-60829ea462e5"></div><script async="" src="./How to Delete Remote Branch in Git – Linux Hint_files/onejs"></script><script type="text/javascript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-delay-js-js-after">
+(function() {
+"use strict";var e=function(){function n(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(e,t,r){return t&&n(e.prototype,t),r&&n(e,r),e}}();function n(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function r(e,t){n(this,r),this.attrName="data-rocketlazyloadscript",this.browser=t,this.options=this.browser.options,this.triggerEvents=e,this.userEventListener=this.triggerListener.bind(this)}return e(r,[{key:"init",value:function(){this._addEventListener(this)}},{key:"reset",value:function(){this._removeEventListener(this)}},{key:"_addEventListener",value:function(t){this.triggerEvents.forEach(function(e){return window.addEventListener(e,t.userEventListener,t.options)})}},{key:"_removeEventListener",value:function(t){this.triggerEvents.forEach(function(e){return window.removeEventListener(e,t.userEventListener,t.options)})}},{key:"_loadScriptSrc",value:function(){var r=this,e=document.querySelectorAll("script["+this.attrName+"]");0!==e.length&&Array.prototype.slice.call(e).forEach(function(e){var t=e.getAttribute(r.attrName);e.setAttribute("src",t),e.removeAttribute(r.attrName)}),this.reset()}},{key:"triggerListener",value:function(){this._loadScriptSrc(),this._removeEventListener(this)}}],[{key:"run",value:function(){RocketBrowserCompatibilityChecker&&new r(["keydown","mouseover","touchmove","touchstart"],new RocketBrowserCompatibilityChecker({passive:!0})).init()}}]),r}();t.run();
+}());
+</script>
+<script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/imagesloaded.min.js" id="imagesloaded-js" defer=""></script>
+<script type="text/javascript" id="vce-main-js-extra">
+/* <![CDATA[ */
+var vce_js_settings = {"sticky_header":"","sticky_header_offset":"700","sticky_header_logo":"","logo":"https:\/\/linuxhint.com\/wp-content\/uploads\/2019\/11\/Logo-final.png","logo_retina":"","logo_mobile":"","logo_mobile_retina":"","rtl_mode":"0","ajax_url":"https:\/\/linuxhint.com\/wp-admin\/admin-ajax.php","ajax_wpml_current_lang":null,"ajax_mega_menu":"1","mega_menu_slider":"","mega_menu_subcats":"","lay_fa_grid_center":"","full_slider_autoplay":"","grid_slider_autoplay":"","grid_big_slider_autoplay":"","fa_big_opacity":{"1":"0.5","2":"0.7"},"top_bar_mobile":"1","top_bar_mobile_group":"","top_bar_more_link":"More"};
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/min-17bc9c74b041274b3b0c69086b68755d.js" id="vce-main-js" defer=""></script>
+<script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/scripts.min.js" id="aawp-script-js" defer=""></script>
+<script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/fitvids.min.js" id="__ytprefsfitvids__-js" defer=""></script>
+<script type="text/javascript" src="./How to Delete Remote Branch in Git – Linux Hint_files/wp-embed.min.js" id="wp-embed-js" defer=""></script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="./How to Delete Remote Branch in Git – Linux Hint_files/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<div class="play"></div>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.dataset.query.length?'':'&'+this.dataset.query;e.setAttribute("src",t.replace("ID",this.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.replaceChild(e,this)}document.addEventListener("DOMContentLoaded",function(){var e,t,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),e.onclick=lazyLoadYoutubeIframe,a[t].appendChild(e)});</script>
+
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1605425343 --><div id="sidr-main" class="sidr left"><div class="sidr-inner">
+	<ul id="sidr-id-vce_main_navigation_menu" class="sidr-class-nav-menu"><li id="sidr-id-menu-item-18534" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-home sidr-class-menu-item-18534"><a href="https://linuxhint.com/">Home</a></li><li id="sidr-id-menu-item-28744" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-28744"><a target="_blank" rel="noopener noreferrer" href="https://help.linuxhint.com/">Help Forum</a></li><li id="sidr-id-menu-item-19816" class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-19816"><a href="https://linuxhint.com/subscribe-to-linuxhint-com/">Subscribe!</a></li><li id="sidr-id-menu-item-33966" class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-33966"><a href="https://linuxhint.com/write-for-linuxhint-com/">Write For Us</a></li><li id="sidr-id-menu-item-23466" class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-23466"><a href="https://linuxhint.com/policies-and-privacy/">Privacy</a></li><li id="sidr-id-menu-item-37290" class="sidr-class-menu-item sidr-class-menu-item-type-post_type sidr-class-menu-item-object-page sidr-class-menu-item-37290"><a href="https://linuxhint.com/terms-of-use/">Terms</a></li><li class="sidr-class-search-header-wrap"><a class="sidr-class-search_header" href="javascript:void(0)"><i class="sidr-class-fa sidr-class-fa-search"></i></a><ul class="sidr-class-search-header-form-ul"><li><form class="sidr-class-vce-search-form" action="https://linuxhint.com/" method="get">
+	<input name="s" class="sidr-class-vce-search-input" size="20" type="text" value="Type here to search..." onfocus="(this.value == &#39;Type here to search...&#39;) &amp;&amp; (this.value = &#39;&#39;)" onblur="(this.value == &#39;&#39;) &amp;&amp; (this.value = &#39;Type here to search...&#39;)" placeholder="Type here to search...">
+		<button type="submit" class="sidr-class-vce-search-submit"><i class="sidr-class-fa sidr-class-fa-search"></i></button> 
+</form></li></ul></li></ul></div></div><iframe name="__tcfapiLocator" style="display: none;" src="./How to Delete Remote Branch in Git – Linux Hint_files/saved_resource(2).html"></iframe><div class="adthrive-comscore adthrive-footer-message">
+      <div class="adthrive-privacy-preferences">
+        <a href="javascript:adthrive.cmd.push(adthrive.showPrivacyPreferences);">Update Privacy Preferences</a>
+      </div>
+    <span>An Elite CafeMedia Publisher</span></div><div id="AdThrive_Footer_1_desktop" class="adthrive-ad adthrive-footer adthrive-footer-1 adthrive-sticky" closable="true" data-google-query-id="CPnoy-OdhO0CFeM10wodE1YOZA"><div id="google_ads_iframe_/18190176/AdThrive_Footer_1/5c9b6001b80bec0dfaf0b493_0__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"><iframe frameborder="0" src="./How to Delete Remote Branch in Git – Linux Hint_files/container(5).html" id="google_ads_iframe_/18190176/AdThrive_Footer_1/5c9b6001b80bec0dfaf0b493_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" data-google-container-id="b" style="border: 0px; vertical-align: bottom;" data-load-complete="true"></iframe></div><span class="adthrive-close">×</span></div><iframe id="google_osd_static_frame_1818004621890" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./How to Delete Remote Branch in Git – Linux Hint_files/saved_resource(3).html"></iframe></body><iframe sandbox="allow-scripts allow-same-origin" id="2773bb0f2201fb8a" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" width="0" hspace="0" vspace="0" height="0" style="height:0px;width:0px;display:none;" scrolling="no" src="./How to Delete Remote Branch in Git – Linux Hint_files/d.html">
+    </iframe></html>

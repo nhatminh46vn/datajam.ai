@@ -1,0 +1,10 @@
+name: A workflow to create a Dockerfile
+on: push
+
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./Docker_tf
