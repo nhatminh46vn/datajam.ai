@@ -1,3 +1,4 @@
+## EASY
 **EXO 1 : write_text_to_texfile.py:**
 Create a function implementing:
 Save text into a filename. arguments (string_text, dest)
@@ -22,6 +23,7 @@ Create a function implementing:
 Find the sum of 2 numbers (a,b)
 Returns sum_value
 
+## MEDIUM
 **EXO 6: sum_of_any_elements.py**
 Create a function implementing:
 Find the frequency of words in a textile (text_file_path)
