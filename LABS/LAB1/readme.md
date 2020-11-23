@@ -23,11 +23,11 @@ Create a function implementing >
 Find the sum of 2 numbers (a,b)
 Returns sum_value
 
-## MEDIUM
+## MEDIUM (new notion)
 **EXO 6: sum_of_any_elements.py**
 Create a function implementing >
-Find the frequency of words in a textile (text_file_path)
-Returns  freq_value
+Find the sum of any numbers (a,b,c,d) or (a,b) or (a,b,c,d,e,f)...
+Returns  sum_value
 
 **EXO 7: Create the FileToolBox.py**
 Create a class implementing >
